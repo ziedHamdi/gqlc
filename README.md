@@ -1,6 +1,8 @@
 The aim of this project is to demonstrate a bug in graphql-compose
 
-Even though a field called 
+Even though a field called nameRexexp is configured  as a filter arg in ./src/gqlc/entity
+
+We can't find it in the schema exposed by the server
 
 <pre>
 {
@@ -16,3 +18,8 @@ Even though a field called
   }
 }
 </pre>
+
+If we comment the line ./src/gqlc/index.js:4 (we just stop including EntityGroup) 
+things work fine
+
+start the server running the command <i>yarn run dev</i>
